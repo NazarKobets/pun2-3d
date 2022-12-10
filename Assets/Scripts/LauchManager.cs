@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 
-public class LauchManager : MonoBehaviour
+public class LauchManager : MonoBehaviourPunCallbacks
 {
 
     void Start()
@@ -16,4 +16,6 @@ public class LauchManager : MonoBehaviour
     {
         
     }
+
+
 }
