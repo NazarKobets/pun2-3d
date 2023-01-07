@@ -22,5 +22,10 @@ public class TakeDamage : MonoBehaviour
         health -= damage;
         Debug.Log(health);
         healthBar.fillAmount = health / startHealth;
+
+        if (health <= 0)
+        {
+            // Die Method
+        }
     }
 }
