@@ -18,11 +18,16 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
 
         movementController.enabled = isEnabled;
         playerCamera.enabled = isEnabled;
+
+        SetPlayerUI();
     }
 
     void SetPlayerUI()
     {
-        playerNameText.text = photonView.Owner.NickName;
+        if (playerNameText != null)
+        {
+            playerNameText.text = photonView.Owner.NickName;
+        }
     }
 
     void Update()
