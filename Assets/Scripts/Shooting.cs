@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
@@ -26,6 +27,13 @@ public class Shooting : MonoBehaviour
             if (Physics.Raycast(ray, out var hit, maxDistance:100))
             {
                 Debug.Log(hit.collider.gameObject.name);
+
+                GameObject hitObject = hit.collider.gameObject;
+
+                if (hitObject.CompareTag("Player") && !hitObject.GetComponent<PhotonView>().IsMine)
+                {
+                    hitObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, parameters: 10f);
+                }
             }
         }
     }
