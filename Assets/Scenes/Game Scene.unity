@@ -1106,7 +1106,7 @@ GameObject:
   - component: {fileID: 1648593250}
   - component: {fileID: 1648593249}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: PlayerName Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1580,6 +1580,10 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1051479554, guid: 0ffa08a33cb73124c8249c11b935c163, type: 3}
+      propertyPath: playerNameText
+      value: 
+      objectReference: {fileID: 1648593249}
     - target: {fileID: 1640146553337357349, guid: 0ffa08a33cb73124c8249c11b935c163, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.084
