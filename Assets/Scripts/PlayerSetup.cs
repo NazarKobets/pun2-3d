@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
+using TMPro;
 using UnityEngine;
 
 public class PlayerSetup : MonoBehaviourPunCallbacks
 {
     [SerializeField] private GameObject FPSCamera;
+    [SerializeField] private TMP_Text playerNameText;
 
     private void Start()
     {
@@ -16,6 +18,11 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
 
         movementController.enabled = isEnabled;
         playerCamera.enabled = isEnabled;
+    }
+
+    void SetPlayerUI()
+    {
+        playerNameText.text = photonView.Owner.NickName;
     }
 
     void Update()
