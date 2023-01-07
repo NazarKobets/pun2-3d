@@ -7,12 +7,12 @@ public class PlayerNameInputManager : MonoBehaviour
 {
     public void SetPlayerName(string playername)
     {
-        if (string.IsNullOrEmpty(playername) && playername is null)
-        {
-            Debug.LogWarning(message: "Name is empty");
-            return;
-        }
-
+         if (string.IsNullOrEmpty(playername))
+         {
+             Debug.LogWarning("Player name is empty");
+             return;
+         }
+        
         PhotonNetwork.NickName = playername;
     }
 }
