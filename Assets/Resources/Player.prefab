@@ -945,6 +945,7 @@ GameObject:
   - component: {fileID: -5091866829745839706}
   - component: {fileID: 1051479555}
   - component: {fileID: 4441501593929437342}
+  - component: {fileID: 6633318363538979912}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1051,7 +1052,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1051479555}
-  sceneViewId: 1
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &1051479555
@@ -1084,6 +1085,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   startHealth: 100
+--- !u!114 &6633318363538979912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640146554423973383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31a2af768f324443b531e242b8f9355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCamera: {fileID: 0}
+  fireRate: 0.1
 --- !u!1 &1640146554608365547
 GameObject:
   m_ObjectHideFlags: 0
